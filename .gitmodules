@@ -85,7 +85,7 @@
 	branch = cyw30739
 [submodule "third_party/mbed-os/repo"]
 	path = third_party/mbed-os/repo
-	url = https://github.com/ARMmbed/mbed-os.git
+	url=https://github.com/neooxu/mbed-os.git
 	branch = master
 [submodule "third_party/mbed-os-posix-socket/repo"]
 	path = third_party/mbed-os-posix-socket/repo

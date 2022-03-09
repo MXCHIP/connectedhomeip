@@ -83,6 +83,8 @@ CHIP_ERROR WiFiDriverImpl::Init()
         mStagingNetwork = mSavedNetwork;
     }
 
+    ConnectivityMgrImpl().AddTask(OnConnectNetwork, 0);
+
     return CHIP_NO_ERROR;
 }
 
@@ -265,7 +267,7 @@ exit:
 
 void WiFiDriverImpl::DisconnectNetwork(ByteSpan networkId)
 {
-    Status status = Status::kSuccess;
+    //Status status = Status::kSuccess;
 
     VerifyOrReturn(mWiFiInterface != nullptr, ChipLogError(DeviceLayer, "Wifi network not available"));
     VerifyOrReturn(NetworkMatch(mStagingNetwork, networkId), ChipLogError(DeviceLayer, "Network not found"));

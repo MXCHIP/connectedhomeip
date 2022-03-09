@@ -58,6 +58,15 @@ EOF
     PW_ROOT="$_CHIP_ROOT/third_party/pigweed/repo"
     export PW_ROOT
 
+    IDF_PATH="/opt/espressif/esp-idf"
+    export IDF_PATH
+    
+    IDF_TOOLS_PATH="/opt/espressif/tools"
+    export IDF_TOOLS_PATH
+
+    PW_ENVIRONMENT_ROOT="$_CHIP_ROOT/.enviroment"
+    export PW_ENVIRONMENT_ROOT
+
     . "$_CHIP_ROOT/third_party/pigweed/repo/pw_env_setup/util.sh"
 
     _chip_bootstrap_banner() {

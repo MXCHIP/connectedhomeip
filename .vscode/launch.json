@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "QRCode Tests",
             "type": "cppdbg",
@@ -91,7 +92,8 @@
             "request": "launch",
             "cwd": "${workspaceRoot}/examples/${input:mbedApp}/mbed",
             "executable": "./build-${input:mbedTarget}/${input:mbedDebugProfile}/chip-mbed-${input:mbedApp}-example.elf",
-            "armToolchainPath": "${env:PW_ENVIRONMENT_ROOT}/cipd/pigweed/bin/", // Pigweed environment bootstraping required
+            //"armToolchainPath": "${env:PW_ENVIRONMENT_ROOT}/cipd/pigweed/bin/", // Pigweed environment bootstraping required
+            "armToolchainPath": "/Applications/ARM/bin",
             "openocdPath": "${env:OPENOCD_PATH/bin}",
             "servertype": "openocd",
             "searchDir": [
@@ -151,8 +153,9 @@
             "request": "launch",
             "cwd": "${workspaceRoot}/examples/${input:mbedApp}/mbed",
             "executable": "./build-${input:mbedTarget}/${input:mbedFlashProfile}/chip-mbed-${input:mbedApp}-example.elf",
-            "armToolchainPath": "${env:PW_ENVIRONMENT_ROOT}/cipd/pigweed/bin/", // Pigweed environment bootstraping required
-            "openocdPath": "${env:OPENOCD_PATH/bin}",
+            // "armToolchainPath": "${env:PW_ENVIRONMENT_ROOT}/cipd/pigweed/bin/", // Pigweed environment bootstraping required
+            "armToolchainPath": "/Applications/ARM/bin",
+            // "openocdPath": "${env:OPENOCD_PATH/bin}",
             "servertype": "openocd",
             "searchDir": [
                 "${workspaceRoot}/config/mbed/scripts",
